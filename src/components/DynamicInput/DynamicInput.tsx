@@ -112,10 +112,8 @@ const DynamicInput: React.FC<DynamicInputProps> = ({
           onChange={(value: string) => handleInputChange(index, value)}
           onFocus={handleInputFocus}
           onBlur={handleInputBlur}
-          isfocus={focus ? 1 : 0}
-          // isempty={input.length === 0 ? 1 : 0}
-          // isfilled={input.length !== 0 ? 1 : 0}
-          iserror={error ? 1 : 0}
+          isfocus={focus}
+          iserror={error ? true : false}
           unit={`${index + 1}`}
           placeholder="Enter a value"
           {...props}

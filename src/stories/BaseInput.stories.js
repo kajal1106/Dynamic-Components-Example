@@ -11,10 +11,23 @@ export default {
 export const Primary = {
   args: {
     value: '',
-    isFocus: false,
+    isfocus: false,
     isEmpty: true,
     isFilled: false,
-    isError: false,
-    onChange: undefined
+    iserror: false,
+    onChange: undefined,
+    onFocus: undefined,
+    onBlur: undefined
+  },
+  argTypes: {
+    isfocus: {
+      control: false
+    },
+    isEmpty: {
+      control: false
+    },
+    isFilled: {
+      control: false
+    }
   }
 }

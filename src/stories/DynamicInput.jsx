@@ -74,7 +74,7 @@ export const DynamicInput = ({ dynamicInputs, setDynamicInputs, error, setError,
           onChange={(value) => handleInputChange(index, value)}
           onFocus={handleInputFocus}
           onBlur={handleInputBlur}
-          isfocus={focus ? 1 : 0}
+          isfocus={focus}
           // isempty={input.length === 0 ? 1 : 0}
           // isfilled={input.length !== 0 ? 1 : 0}
           iserror={error ? 1 : 0}

@@ -49,7 +49,7 @@ interface BaseInputProps {
   onChange: (value: string) => void;
   onFocus: (event: FocusEvent<HTMLInputElement>) => void;
   onBlur: (event: FocusEvent<HTMLInputElement>) => void;
-  isfilled: boolean;
+  isfocus: boolean;
   iserror: boolean;
   placeholder: string;
 }
@@ -60,7 +60,7 @@ const BaseInput: React.FC<BaseInputProps> = ({
   onChange,
   onFocus,
   onBlur,
-  isfilled,
+  isfocus,
   iserror,
   placeholder,
   ...props
@@ -92,6 +92,7 @@ const BaseInput: React.FC<BaseInputProps> = ({
         onBlur={handleInputBlur}
         state={isFocus ? 'focus' : iserror ? 'error' : value ? 'filled' : 'empty'}
         placeholder={placeholder}
+        className={isfocus ? 'focus' : ''}
         {...props}
       />
     </InputContainer>

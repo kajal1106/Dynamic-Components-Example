@@ -46,17 +46,24 @@ const Unit = styled.span`
 
 export const BaseInput = ({ unit, value, onChange, onFocus, onBlur, isfilled, iserror, placeholder, ...props }) => {
   const [isFocus, setIsFocus] = useState(false);
-
   const handleInputChange = (e) => {
     onChange(e.target.value);
   };
   
   const handleInputFocus = (e) => {
     // setFocus(true);
+    if(onFocus === undefined){
+      setIsFocus(true);
+    }
+    else 
     onFocus(e);
   };
 
   const handleInputBlur = (e) => {
+    if(onBlur === undefined){
+      setIsFocus(false);
+    }
+    else
     onBlur(e);
   };
   return (
@@ -78,10 +85,10 @@ export const BaseInput = ({ unit, value, onChange, onFocus, onBlur, isfilled, is
 
 BaseInput.propTypes = {
   value: PropTypes.string,
-  isFocus: PropTypes.bool,
+  // isFocus: PropTypes.bool,
   isEmpty: PropTypes.bool,
   isFilled: PropTypes.bool,
-  isError: PropTypes.bool,
+  iserror: PropTypes.bool,
   onChange: PropTypes.func,
   onFocus: PropTypes.func,
   onBlur: PropTypes.func
@@ -89,11 +96,11 @@ BaseInput.propTypes = {
 
 BaseInput.defaultProps = {
   value: '',
-  isFocus: false,
+  // isFocus: false,
   isEmpty: true,
   isFilled: false,
-  isError: false,
-  onChange: (value) => {console.log(value);},
+  iserror: false,
+  onChange: undefined,
   onFocus: undefined,
   onBlur: undefined
 };

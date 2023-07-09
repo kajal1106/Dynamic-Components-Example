@@ -1,8 +1,8 @@
 
 ```markdown
-# React Styling Example
+# React Dynamic Components Example
 
-This is a sample React application that demonstrates the usage of styled-components for styling components. The code showcases different styling techniques using styled-components and provides an interactive form as an example.
+This is a sample React application that demonstrates the usage of dymanic componet and styled-components for styling components. The code showcases different styling techniques using styled-components and provides an interactive form as an example.
 
 ## Getting Started
 

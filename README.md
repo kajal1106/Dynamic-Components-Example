@@ -29,8 +29,8 @@ This is a sample React application that demonstrates the usage of dynamic compon
 ### Links
 
 - Solution URL: [Click Here](https://github.com/kajal1106/Dynamic-Components-Example)
-- Live Site URL: [Click Here]()
-- Code Sandbox URL: [Click Here]()
+- Live Site URL: [Click Here](https://rr35hp-3000.csb.app/)
+- Code Sandbox URL: [Click Here](https://codesandbox.io/p/github/kajal1106/Dynamic-Components-Example/master?workspaceId=f9297b46-44b3-480b-8979-0c911c8cbd19)
 
   
 ### Installation Guide
@@ -224,7 +224,7 @@ To run Storybook and view the component documentation, follow these steps:
 <img width="1440" alt="image" src="https://github.com/kajal1106/Dynamic-Components-Example/assets/39821430/1bf0a390-c523-4a56-b558-1adb93276328">
 
 
-### App Screenshot  
+### Screenshots
 
 #### List of thoughts in dynamic input
 <img width="1440" alt="image" src="https://github.com/kajal1106/Dynamic-Components-Example/assets/39821430/339030bc-424a-4ba0-ab20-2d1f4131ed6f">

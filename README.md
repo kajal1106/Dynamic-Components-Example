@@ -11,7 +11,7 @@ To run the application locally, follow these steps:
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/your-username/react-styling-example.git
+   git clone [https://github.com/your-username/react-styling-example.git](https://github.com/kajal1106/Dynamic-Components-Example.git]
    ```
 
 2. Navigate to the project directory:

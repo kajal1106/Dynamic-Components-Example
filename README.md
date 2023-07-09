@@ -1,46 +1,174 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+```markdown
+# React Styling Example
 
-## Available Scripts
+This is a sample React application that demonstrates the usage of styled-components for styling components. The code showcases different styling techniques using styled-components and provides an interactive form as an example.
 
-In the project directory, you can run:
+## Getting Started
 
-### `npm start`
+To run the application locally, follow these steps:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+1. Clone the repository:
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+   ```bash
+   git clone https://github.com/your-username/react-styling-example.git
+   ```
 
-### `npm test`
+2. Navigate to the project directory:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+   ```bash
+   cd distilled-task
+   ```
 
-### `npm run build`
+3. Install the dependencies:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+   ```bash
+   npm install
+   ```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+4. Start the development server:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+   ```bash
+   npm start
+   ```
 
-### `npm run eject`
+   The application will be running at [http://localhost:3000](http://localhost:3000).
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Folder Structure
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+The project structure is organized as follows:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+- `src`: Contains the source code of the application.
+  - `components`: Contains reusable components used in the application.
+  - `App.tsx`: The main component that renders the application.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## Styling
 
-## Learn More
+The application uses styled-components library for styling. The styling is defined using tagged template literals in JavaScript, allowing for dynamic and responsive styles. The `styled` function is used to create styled components, which can be further customized with props.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Features
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- Dynamic styling based on component state.
+- Responsive design using media queries.
+- Form handling and input validation.
+- State management using React hooks.
+
+## App.tsx
+
+The `App.tsx` file defines the main component of your React application. It includes the following key components and functionality:
+
+### State Variables
+
+- `isHidden`: A boolean state variable that determines whether the form inputs are hidden or visible.
+- `formInputs`: An array state variable that stores the values of the form inputs.
+
+### `toggleVisibility` Function
+
+- This function is triggered when the toggle button is clicked.
+- It toggles the `isHidden` state variable to show or hide the form inputs.
+- If the inputs are hidden (`isHidden` is true), it also clears out any empty input fields by filtering the `formInputs` array.
+
+### `handleSubmit` Function
+
+- This function is triggered when the form is submitted.
+- It prevents the default form submission behavior.
+- It processes the values of the form inputs and creates an output object with a `fieldArray` property that contains the input values.
+
+### Rendered Components
+
+- `StyledAppContainer`: A styled container component for the entire app.
+- `AppHeader`: A component that displays the app's title and description.
+- `FormInput` (imported from `'./components/FormInput/FormInput'`): A custom component that renders an input field.
+- `Button` and `ButtonContainer`: Styled components for rendering buttons.
+- A conditional rendering of the form inputs based on the `isHidden` state variable.
+- A toggle button to show/hide the form inputs.
+
+### Return Statement
+
+The `App` component returns the JSX code that defines the structure and layout of the app. It includes the various styled components, the form inputs, and the toggle button.
+
+
+## Components
+## DynamicInput Component
+
+The `DynamicInput` component is a custom input component that showcases dynamic styling based on the component's state. It is defined in the `DynamicInput.tsx` file.
+
+### Usage
+
+```jsx
+<DynamicInput label="Username" value={username} onChange={handleUsernameChange} />
+```
+
+### Props
+
+- `label` (string): The label for the input.
+- `value` (string): The current value of the input.
+- `onChange` (function): A callback function invoked when the input value changes.
+
+### Implementation
+
+The `DynamicInput` component uses the `BaseInput` component as a base and adds dynamic styling based on the state of the input. It renders the `BaseInput` component and applies additional styles based on the state.
+
+## BaseInput Component
+
+The `BaseInput` component is a reusable input component that provides a consistent style for input fields. It is defined in the `BaseInput.tsx` file.
+
+### Usage
+
+```jsx
+<BaseInput label="Username" value={username} onChange={handleUsernameChange} />
+```
+
+### Props
+
+- `label` (string): The label for the input.
+- `value` (string): The current value of the input.
+- `onChange` (function): A callback function invoked when the input value changes.
+
+### Implementation
+
+The `BaseInput` component is a simple input wrapper that renders a label and an input field. It applies consistent styling to the input field, such as border, padding, and font styles, to provide a unified look and feel across the application.
+
+The `label` prop is used to render the label for the input, while the `value` and `onChange` props are used to control the input value and handle input changes, respectively.
+
+These components demonstrate how you can create reusable input components with consistent styling and add dynamic styles based on the component's state.
+
+## FormInput Component
+
+The `FormInput` component is a reusable component that represents an input field within a form. It is designed to handle user input and provide validation functionality.
+
+### Usage
+
+```jsx
+<FormInput
+  label="Username"
+  name="username"
+  value={username}
+  onChange={handleUsernameChange}
+  error={usernameError}
+/>
+```
+
+### Props
+
+- `label` (string): The label for the input field.
+- `name` (string): The name of the input field.
+- `value` (string): The current value of the input field.
+- `onChange` (function): A callback function invoked when the input value changes.
+- `error` (string): An optional error message to display for the input field.
+
+### Implementation
+
+The `FormInput` component renders a label and an input field. It handles user input and triggers the `onChange` callback function when the input value changes.
+
+The `label` prop is used to display the label for the input field, and the `name` prop is used to uniquely identify the input field within the form.
+
+The `value` prop represents the current value of the input field, and the `onChange` prop is responsible for updating the value in response to user input.
+
+The `error` prop is optional and can be used to display an error message below the input field. This is typically used for form validation, where an error message is shown if the input value is invalid.
+
+The `FormInput` component can be used as a building block for creating forms in your application. It provides a consistent and reusable input field with validation capabilities. You can customize the component and extend its functionality based on your specific requirements.
+
+
+## License
+```

@@ -1,16 +1,39 @@
 
-```markdown
-# React Dynamic Components Example
+## Table of contents
 
+- [Table of contents](#table-of-contents)
+- [Overview](#overview)
+  - [Features](#features)
+  - [Links](#links)
+  - [Built with](#built-with)
+  - [Installation guide](#installation-guide)
+  - [Folder Structure](#folder-structure)
+  - [Component and its properties](#component-and-its-properties)
+- [Storybook](#storybook)
+- [Screenshots](#screenshots)
+- [Author](#author)
+
+## Overview
 This is a sample React application that demonstrates the usage of dynamic components and styled-components for styling components. The code showcases various styling techniques using styled-components and provides an interactive form as an example. The Dynamic Input Component generates new Base Inputs dynamically based on the user's interactions with the input they are typing in. It adheres to the following conditions:
 
+### Features
+- Dynamic styling based on component state.
+- Responsive design using media queries.
+- Form handling and input validation.
+- State management using React hooks.
 - A new input appears when the user starts typing in a text input.
 - If the text is removed from an input that is not the last one, it will remain there.
 - Only one empty input at the end is allowed.
 - When the user toggles or revisits the rendered component, empty inputs will be removed.
 
+### Links
 
-## Getting Started
+- Solution URL: [Click Here](https://github.com/kajal1106/Dynamic-Components-Example)
+- Live Site URL: [Click Here]()
+- Code Sandbox URL: [Click Here]()
+
+  
+### Installation Guide
 
 To run the application locally, follow these steps:
 
@@ -40,7 +63,7 @@ To run the application locally, follow these steps:
 
    The application will be running at [http://localhost:3000](http://localhost:3000).
 
-## Folder Structure
+### Folder Structure
 
 The project structure is organized as follows:
 
@@ -48,39 +71,35 @@ The project structure is organized as follows:
   - `components`: Contains reusable components used in the application.
   - `App.tsx`: The main component that renders the application.
 
-## Styling
+## Component and its properties
+
+### Styling
 
 The application uses styled-components library for styling. The styling is defined using tagged template literals in JavaScript, allowing for dynamic and responsive styles. The `styled` function is used to create styled components, which can be further customized with props.
 
-## Features
 
-- Dynamic styling based on component state.
-- Responsive design using media queries.
-- Form handling and input validation.
-- State management using React hooks.
-
-## App.tsx
+### App.tsx
 
 The `App.tsx` file defines the main component of your React application. It includes the following key components and functionality:
 
-### State Variables
+#### State Variables
 
 - `isHidden`: A boolean state variable that determines whether the form inputs are hidden or visible.
 - `formInputs`: An array state variable that stores the values of the form inputs.
 
-### `toggleVisibility` Function
+#### `toggleVisibility` Function
 
 - This function is triggered when the toggle button is clicked.
 - It toggles the `isHidden` state variable to show or hide the form inputs.
 - If the inputs are hidden (`isHidden` is true), it also clears out any empty input fields by filtering the `formInputs` array.
 
-### `handleSubmit` Function
+#### `handleSubmit` Function
 
 - This function is triggered when the form is submitted.
 - It prevents the default form submission behavior.
 - It processes the values of the form inputs and creates an output object with a `fieldArray` property that contains the input values.
 
-### Rendered Components
+#### Rendered Components
 
 - `StyledAppContainer`: A styled container component for the entire app.
 - `AppHeader`: A component that displays the app's title and description.
@@ -89,49 +108,50 @@ The `App.tsx` file defines the main component of your React application. It incl
 - A conditional rendering of the form inputs based on the `isHidden` state variable.
 - A toggle button to show/hide the form inputs.
 
-### Return Statement
+#### Return Statement
 
 The `App` component returns the JSX code that defines the structure and layout of the app. It includes the various styled components, the form inputs, and the toggle button.
 
 
-## Components
-## DynamicInput Component
+### Components
+
+#### DynamicInput Component
 
 The `DynamicInput` component is a custom input component that showcases dynamic styling based on the component's state. It is defined in the `DynamicInput.tsx` file.
 
-### Usage
+#### Usage
 
 ```jsx
 <DynamicInput label="Username" value={username} onChange={handleUsernameChange} />
 ```
 
-### Props
+#### Props
 
 - `label` (string): The label for the input.
 - `value` (string): The current value of the input.
 - `onChange` (function): A callback function invoked when the input value changes.
 
-### Implementation
+#### Implementation
 
 The `DynamicInput` component uses the `BaseInput` component as a base and adds dynamic styling based on the state of the input. It renders the `BaseInput` component and applies additional styles based on the state.
 
-## BaseInput Component
+### BaseInput Component
 
 The `BaseInput` component is a reusable input component that provides a consistent style for input fields. It is defined in the `BaseInput.tsx` file.
 
-### Usage
+#### Usage
 
 ```jsx
 <BaseInput label="Username" value={username} onChange={handleUsernameChange} />
 ```
 
-### Props
+#### Props
 
 - `label` (string): The label for the input.
 - `value` (string): The current value of the input.
 - `onChange` (function): A callback function invoked when the input value changes.
 
-### Implementation
+#### Implementation
 
 The `BaseInput` component is a simple input wrapper that renders a label and an input field. It applies consistent styling to the input field, such as border, padding, and font styles, to provide a unified look and feel across the application.
 
@@ -139,11 +159,11 @@ The `label` prop is used to render the label for the input, while the `value` an
 
 These components demonstrate how you can create reusable input components with consistent styling and add dynamic styles based on the component's state.
 
-## FormInput Component
+### FormInput Component
 
 The `FormInput` component is a reusable component that represents an input field within a form. It is designed to handle user input and provide validation functionality.
 
-### Usage
+#### Usage
 
 ```jsx
 <FormInput
@@ -155,7 +175,7 @@ The `FormInput` component is a reusable component that represents an input field
 />
 ```
 
-### Props
+#### Props
 
 - `label` (string): The label for the input field.
 - `name` (string): The name of the input field.
@@ -163,7 +183,7 @@ The `FormInput` component is a reusable component that represents an input field
 - `onChange` (function): A callback function invoked when the input value changes.
 - `error` (string): An optional error message to display for the input field.
 
-### Implementation
+#### Implementation
 
 The `FormInput` component renders a label and an input field. It handles user input and triggers the `onChange` callback function when the input value changes.
 
@@ -215,5 +235,6 @@ To run Storybook and view the component documentation, follow these steps:
 #### Upon submit button firing an alert to show the output of the fields in the following format:
 <img width="1440" alt="image" src="https://github.com/kajal1106/Dynamic-Components-Example/assets/39821430/13be491c-efff-49cd-94fd-c69bae3fa710">
 
-## License
-```
+## Author
+
+- LinkedIn - [Kajal Singh](https://www.linkedin.com/in/singhkajal/)

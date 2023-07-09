@@ -2,7 +2,13 @@
 ```markdown
 # React Dynamic Components Example
 
-This is a sample React application that demonstrates the usage of dymanic componet and styled-components for styling components. The code showcases different styling techniques using styled-components and provides an interactive form as an example.
+This is a sample React application that demonstrates the usage of dynamic components and styled-components for styling components. The code showcases various styling techniques using styled-components and provides an interactive form as an example. The Dynamic Input Component generates new Base Inputs dynamically based on the user's interactions with the input they are typing in. It adheres to the following conditions:
+
+- A new input appears when the user starts typing in a text input.
+- If the text is removed from an input that is not the last one, it will remain there.
+- Only one empty input at the end is allowed.
+- When the user toggles or revisits the rendered component, empty inputs will be removed.
+
 
 ## Getting Started
 

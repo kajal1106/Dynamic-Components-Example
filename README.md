@@ -176,5 +176,44 @@ The `error` prop is optional and can be used to display an error message below t
 The `FormInput` component can be used as a building block for creating forms in your application. It provides a consistent and reusable input field with validation capabilities. You can customize the component and extend its functionality based on your specific requirements.
 
 
+## Storybook
+
+### Running Storybook
+
+To run Storybook and view the component documentation, follow these steps:
+
+   1. Install the project dependencies:
+      ```bash
+      npm install
+      ```
+   
+   2. Run Storybook:
+      ```bash
+      npm run storybook
+      ```
+
+   3. Open your browser and navigate to `http://localhost:6006` to view the Storybook interface.
+
+### Component Documentation
+
+- [BaseInput](./src/stories/BaseInput.stories.tsx)
+- [DynamicInput](./src/stories/DynamicInput.stories.tsx)
+- [FormInput](./src/stories/FormInput.stories.tsx)
+
+### Screenshot of Storybook Interface
+<img width="1440" alt="image" src="https://github.com/kajal1106/Dynamic-Components-Example/assets/39821430/1bf0a390-c523-4a56-b558-1adb93276328">
+
+
+### App Screenshot  
+
+#### List of thoughts in dynamic input
+<img width="1440" alt="image" src="https://github.com/kajal1106/Dynamic-Components-Example/assets/39821430/339030bc-424a-4ba0-ab20-2d1f4131ed6f">
+
+#### This part is demonstrating the error-handling in the dynamic input componet
+<img width="1440" alt="image" src="https://github.com/kajal1106/Dynamic-Components-Example/assets/39821430/4c1a4c5e-2ee9-4fe0-88d1-5e7d043c06ae">
+
+#### Upon submit button firing an alert to show the output of the fields in the following format:
+<img width="1440" alt="image" src="https://github.com/kajal1106/Dynamic-Components-Example/assets/39821430/13be491c-efff-49cd-94fd-c69bae3fa710">
+
 ## License
 ```

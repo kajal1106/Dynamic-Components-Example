@@ -1,4 +1,4 @@
-import React, { useState, FormEvent } from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import FormInput from './components/FormInput/FormInput';
 
@@ -78,7 +78,8 @@ const AppHeader = styled.div`
     font-size: 24px;
     font-weight: 600;
     line-height: 32px;
-    letter-spacing: 0px;
+    letter-spacing: .1em;
+    text-transform: uppercase;
   }
 
   > span {
@@ -88,6 +89,7 @@ const AppHeader = styled.div`
     letter-spacing: 0px;
     text-align: left;
     color: #717171;
+    text-transform: uppercase;
   }
 `;
 
@@ -139,8 +141,8 @@ const App: React.FC = () => {
         </svg>
       </Header>
       <AppHeader>
-        <h2>Facilities & Features</h2>
-        <span>List the property’s top features</span>
+        <h2>Manifest & Beliefs</h2>
+        <span>List your thoughts to living your best life</span>
       </AppHeader>
       {!isHidden && (          
         <FormInput

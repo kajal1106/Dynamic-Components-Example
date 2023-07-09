@@ -61,6 +61,7 @@ const DynamicInput: React.FC<DynamicInputProps> = ({
   setError,
   ...props
 }) => {
+  // eslint-disable-next-line
   const [inputState, setInputState] = useState<InputState>({
     focus: false,
     empty: true,
@@ -69,6 +70,7 @@ const DynamicInput: React.FC<DynamicInputProps> = ({
     disabled: false,
   });
   const [focus, setFocus] = useState(false);
+  // eslint-disable-next-line
   const [errorState, setErrorState] = useState(error);
 
   const handleInputChange = (index: number, value: string) => {
@@ -94,6 +96,7 @@ const DynamicInput: React.FC<DynamicInputProps> = ({
       if (index !== inputs.length - 1) {
         return input.length < 5;
       }
+      return false;
     });
     if (hasValueLessThanTen) {
       setError(true);
@@ -102,6 +105,7 @@ const DynamicInput: React.FC<DynamicInputProps> = ({
       setError(false);
       setErrorState(false);
     }
+    return false;
   };
 
   const renderInputs = () => {

@@ -30,7 +30,7 @@ This is a sample React application that demonstrates the usage of dynamic compon
 
 - Solution URL: [Click Here](https://github.com/kajal1106/Dynamic-Components-Example)
 - Live Site URL: [Click Here](https://dynamic-components-example.netlify.app/)
-- Code Sandbox URL: [Click Here](https://codesandbox.io/p/github/kajal1106/Dynamic-Components-Example/master?workspaceId=f9297b46-44b3-480b-8979-0c911c8cbd19)
+- Code Sandbox URL: [Click Here](https://codesandbox.io/p/github/kajal1106/Dynamic-Components-Example/master)
 
   
 ### Installation Guide

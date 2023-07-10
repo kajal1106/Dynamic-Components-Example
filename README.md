@@ -29,7 +29,7 @@ This is a sample React application that demonstrates the usage of dynamic compon
 ### Links
 
 - Solution URL: [Click Here](https://github.com/kajal1106/Dynamic-Components-Example)
-- Live Site URL: [Click Here](https://rr35hp-3000.csb.app/)
+- Live Site URL: [Click Here]([https://rr35hp-3000.csb.app/](https://effortless-bunny-a6c2df.netlify.app/))
 - Code Sandbox URL: [Click Here](https://codesandbox.io/p/github/kajal1106/Dynamic-Components-Example/master?workspaceId=f9297b46-44b3-480b-8979-0c911c8cbd19)
 
   

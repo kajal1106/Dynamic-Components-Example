@@ -47,7 +47,6 @@ interface BaseInputProps {
   unit?: string;
   value: string;
   onChange: (value: string) => void;
-  onFocus: (event: FocusEvent<HTMLInputElement>) => void;
   onBlur: (event: FocusEvent<HTMLInputElement>) => void;
   isfocus: boolean;
   iserror: boolean;
@@ -58,7 +57,6 @@ const BaseInput: React.FC<BaseInputProps> = ({
   unit,
   value,
   onChange,
-  onFocus,
   onBlur,
   isfocus,
   iserror,
@@ -73,7 +71,6 @@ const BaseInput: React.FC<BaseInputProps> = ({
 
   const handleInputFocus = (e: FocusEvent<HTMLInputElement>) => {
     setIsFocus(true);
-    onFocus(e);
   };
 
   const handleInputBlur = (e: FocusEvent<HTMLInputElement>) => {

@@ -15,7 +15,6 @@ const Header = styled.div`
   align-items: center;
 `;
 
-
 const ButtonContainer = styled.div`
   display: flex;
   flex-direction: column;

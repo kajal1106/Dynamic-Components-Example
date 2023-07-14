@@ -33,17 +33,8 @@ const StyledBaseInput = styled(BaseInput)`
   width: 100%;
 `;
 
-interface InputState {
-  focus: boolean;
-  empty: boolean;
-  filled: boolean;
-  error: boolean;
-  disabled: boolean;
-}
-
 interface DynamicInputProps {
   columns: number;
-  // columnLayout: any; // Replace with the actual type
   spacing: number;
   inputs: string[];
   setInputs: (inputs: string[]) => void;
@@ -53,7 +44,6 @@ interface DynamicInputProps {
 
 const DynamicInput: React.FC<DynamicInputProps> = ({
   columns,
-  // columnLayout,
   spacing,
   inputs,
   setInputs,
@@ -61,14 +51,6 @@ const DynamicInput: React.FC<DynamicInputProps> = ({
   setError,
   ...props
 }) => {
-  // eslint-disable-next-line
-  const [inputState, setInputState] = useState<InputState>({
-    focus: false,
-    empty: true,
-    filled: false,
-    error: false,
-    disabled: false,
-  });
   const [focus, setFocus] = useState(false);
   // eslint-disable-next-line
   const [errorState, setErrorState] = useState(error);
@@ -88,10 +70,6 @@ const DynamicInput: React.FC<DynamicInputProps> = ({
     setInputs(newInputs);
   };
 
-  // Function to handle input focus
-  const handleInputFocus = () => {
-    setInputState((prevState) => ({ ...prevState, focus: true }));
-  };
 
   // Function to handle input blur
   const handleInputBlur = () => {
@@ -121,7 +99,6 @@ const DynamicInput: React.FC<DynamicInputProps> = ({
         <StyledBaseInput
           value={input}
           onChange={(value: string) => handleInputChange(index, value)}
-          onFocus={handleInputFocus}
           onBlur={handleInputBlur}
           isfocus={focus}
           iserror={error ? true : false}

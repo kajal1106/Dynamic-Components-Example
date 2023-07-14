@@ -73,25 +73,31 @@ const DynamicInput: React.FC<DynamicInputProps> = ({
   // eslint-disable-next-line
   const [errorState, setErrorState] = useState(error);
 
+  // Function to handle input change
   const handleInputChange = (index: number, value: string) => {
     const newInputs = [...inputs];
     newInputs[index] = value;
 
+    // Logic to add or remove inputs based on the last input value
     if (index === newInputs.length - 2 && value === '') {
-      newInputs.splice(index + 1, 1);
+      newInputs.splice(index + 1, 1); // Remove the second last input if it's empty
     } else if (index === newInputs.length - 1 && value !== '' && newInputs.length < 10) {
-      newInputs.push('');
+      newInputs.push(''); // Add a new input if the last input is filled and the total inputs are less than 10
     }
 
     setInputs(newInputs);
   };
 
+  // Function to handle input focus
   const handleInputFocus = () => {
     setInputState((prevState) => ({ ...prevState, focus: true }));
   };
 
+  // Function to handle input blur
   const handleInputBlur = () => {
     setFocus(false);
+
+    // Check if any input has a value less than 5 characters
     const hasValueLessThanTen = inputs.some(function (input, index) {
       if (index !== inputs.length - 1) {
         return input.length < 5;
@@ -108,6 +114,7 @@ const DynamicInput: React.FC<DynamicInputProps> = ({
     return false;
   };
 
+  // Function to render the dynamic inputs
   const renderInputs = () => {
     return inputs.map((input, index) => (
       <InputWrapper key={index}>
